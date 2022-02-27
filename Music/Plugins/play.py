@@ -217,7 +217,6 @@ Kembalikan kembali ke Akun Pengguna Dari Hak Admin.
         await message.reply_text(
             """
 Saya perlu menjadi admin dengan beberapa izin:
-
 - **dapat mengelola obrolan suara:** Untuk mengelola obrolan suara
 - **dapat menghapus pesan:** Untuk menghapus Sampah yang Dicari Musik
 - **dapat mengundang pengguna**: Untuk mengundang asisten untuk mengobrol
@@ -309,7 +308,6 @@ Saya perlu menjadi admin dengan beberapa izin:
             return await mystic.edit_text(
                 f"""
 **Kesalahan Durasi**
-
 **Durasi yang Diizinkan: **{DURATION_LIMIT}
 **Durasi yang Diterima:** {duration}
 """
@@ -330,7 +328,7 @@ Saya perlu menjadi admin dengan beberapa izin:
             else file_name,
         )
         title = "Audio Yang Dipilih Dari Telegram"
-        link = "https://t.me/trashme2"
+        link = "https://t.me/NastyProject"
         thumb = "cache/Audio.png"
         videoid = "smex1"
     elif url:
@@ -358,7 +356,6 @@ Saya perlu menjadi admin dengan beberapa izin:
             return await mystic.edit_text(
                 f"""
 **Kesalahan Durasi**
-
 **Durasi yang Diizinkan:** {DURATION_LIMIT}
 **Durasi yang Diterima:** {duration}
 """
@@ -521,11 +518,9 @@ Saya perlu menjadi admin dengan beberapa izin:
             photo=thumb,
             caption=f"""
 <b>💡 Trek ditambahkan ke antrian</b>
-
 <b>🏷️ Nama: [{title[:25]}]({link})</b>
 <b>⏱️ Durasi:</b> {duration} \n
 <b>🎧 Atas permintaan: </b>{checking}
-
 <b>#️⃣ Posisi antrian</b> {position}
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -599,7 +594,6 @@ async def startyuplay(_, CallbackQuery):
         await CallbackQuery.message.reply_text(
             f"""
 **Kesalahan Durasi**
-
 **Durasi yang Diizinkan: {DURATION_LIMIT}**
 **Durasi yang Diteriman:** {duration}
 """
@@ -712,12 +706,10 @@ async def startyuplay(_, CallbackQuery):
             photo=thumb,
             caption=f"""
 <b>💡 Trek ditambahkan ke antrian</b>
-
 <b>🏷 Nama:</b>[{title[:25]}]({url})
 <b>⏱️ Durasi:</b> {duration}
 <b>💡</b> [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
 <b>🎧 Atas permintaan:</b> {checking}
-
 <b>#️⃣ Posisi antrian</b> {position}
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -822,7 +814,7 @@ async def popat(_,CallbackQuery):
 
 @app.on_message(filters.command("playplaylist"))
 async def play_playlist_cmd(_, message):
-    thumb ="cache/IMG_20211230_211509_034.jpg"
+    thumb ="IMG_20211212_064933_961.jpg"
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     buttons = playlist_markup(user_name, user_id)
