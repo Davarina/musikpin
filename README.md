@@ -57,6 +57,7 @@
 #### Contributors
 - [Kyy](https://github.com/muhammadrizky16): Nasty Owner
 - [KenKan](https://github.com/kenkansaja): Contributor
+- [Yansen](https://github.com/Yansensad): Lepin Owner
 - [xD_ShaShank](https://github.com/theshashankk): Yukki Dev
 - [VegetaxD](http://github.com/VegetaxD): Yukki Owner 
 - [Laky](https://github.com/Laky-64): PyTgCalls Developer
