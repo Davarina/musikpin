@@ -48,7 +48,7 @@ XCB = [
 ]
 
 
-@app.on_message(filters.command("get_log") & filters.user(SUDOERS))
+@app.on_message(filters.command("get_logm") & filters.user(SUDOERS))
 async def log_(client, message):
     if await is_heroku():
         if HEROKU_API_KEY == "" and HEROKU_APP_NAME == "":
@@ -79,7 +79,7 @@ async def log_(client, message):
         return await message.reply_text(data)
 
 
-@app.on_message(filters.command("get_var") & filters.user(SUDOERS))
+@app.on_message(filters.command("get_varm") & filters.user(SUDOERS))
 async def varget_(client, message):
     usage = "**Usage:**\n/get_var [Var Name]"
     if len(message.command) != 2:
@@ -119,7 +119,7 @@ async def varget_(client, message):
             return await message.reply_text(f".env:\n\n**{check_var}:** `{str(output)}`")
 
 
-@app.on_message(filters.command("del_var") & filters.user(SUDOERS))
+@app.on_message(filters.command("del_varm") & filters.user(SUDOERS))
 async def vardel_(client, message):
     usage = "**Usage:**\n/del_var [Var Name]"
     if len(message.command) != 2:
@@ -160,7 +160,7 @@ async def vardel_(client, message):
             return await message.reply_text(f".env Var Deletion:\n\n`{check_var}` has been deleted successfully. To restart the bot touch /restart command.")
 
 
-@app.on_message(filters.command("set_var") & filters.user(SUDOERS))
+@app.on_message(filters.command("set_varm") & filters.user(SUDOERS))
 async def set_var(client, message):
     usage = "**Usage:**\n/set_var [Var Name] [Var Value]"
     if len(message.command) < 3:
@@ -204,7 +204,7 @@ async def set_var(client, message):
             return await message.reply_text(f"**.env dəyişən əlavə edilməsi:**\n\n`{to_set}` has been added sucsessfully. To restart the bot touch /restart command.")
 
 
-@app.on_message(filters.command("usage") & filters.user(SUDOERS))
+@app.on_message(filters.command("usagem") & filters.user(SUDOERS))
 async def usage_dynos(client, message):
     ### Credits CatUserbot
     if await is_heroku():
@@ -270,7 +270,7 @@ Total Left: `{hours}`**h**  `{minutes}`**m**  [`{percentage}`**%**]"""
     return await dyno.edit(text)
 
 
-@app.on_message(filters.command("update") & filters.user(SUDOERS))
+@app.on_message(filters.command("updatem") & filters.user(SUDOERS))
 async def update_(client, message):
     if await is_heroku():
         if HEROKU_API_KEY == "" and HEROKU_APP_NAME == "":
