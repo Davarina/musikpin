@@ -455,7 +455,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         what = "Query Given"
         await LOG_CHAT(message, what)
         query = message.text.split(None, 1)[1]
-        mystic = await message.reply_text("**🔎 Pencarian**")
+        mystic = await message.reply_text("**🔎 Bentar Di Terawang Dulu**")
         try:
             a = VideosSearch(query, limit=5)
             result = (a.result()).get("result")
@@ -518,11 +518,12 @@ Saya perlu menjadi admin dengan beberapa izin:
         await message.reply_photo(
             photo=thumb,
             caption=f"""
-<b>💡 Trek ditambahkan ke antrian</b>
+<b>💡 Lagu ditambahkan ke antrian</b>
 <b>🏷️ Nama: [{title[:25]}]({link})</b>
 <b>⏱️ Durasi:</b> {duration} \n
 <b>🎧 Atas permintaan: </b>{checking}
 <b>#️⃣ Posisi antrian</b> {position}
+<b>💓 Lepin With Love</b> {BOT_NAME}
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -706,12 +707,12 @@ async def startyuplay(_, CallbackQuery):
         m = await CallbackQuery.message.reply_photo(
             photo=thumb,
             caption=f"""
-<b>💡 Trek ditambahkan ke antrian</b>
-<b>🏷 Nama:</b>[{title[:25]}]({url})
-<b>⏱️ Durasi:</b> {duration}
-<b>💡</b> [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
-<b>🎧 Atas permintaan:</b> {checking}
+<b>💡 Lagu ditambahkan ke antrian</b>
+<b>🏷️ Nama: [{title[:25]}]({link})</b>
+<b>⏱️ Durasi:</b> {duration} \n
+<b>🎧 Atas permintaan: </b>{checking}
 <b>#️⃣ Posisi antrian</b> {position}
+<b>💓 Lepin With Love</b> {BOT_NAME}
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
