@@ -299,6 +299,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         await LOG_CHAT(message, what)
         mystic = await message.reply_text(
             f"**🔄 Memproses Audio Yang Diberikan Oleh {username}**"
+            f"**🚀 Sabar Dulu Ya Tuan {username} Sebentar Doang Ko **"
         )
         if audio.file_size > 157286400:
             await mystic.edit_text("Ukuran File Audio Harus Kurang dari 150 mb")
@@ -328,7 +329,7 @@ Saya perlu menjadi admin dengan beberapa izin:
             else file_name,
         )
         title = "Audio Yang Dipilih Dari Telegram"
-        link = "https://t.me/NastyProject"
+        link = "https://t.me/trashme2"
         thumb = "cache/Audio.png"
         videoid = "smex1"
     elif url:
