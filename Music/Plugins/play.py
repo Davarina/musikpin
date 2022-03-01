@@ -561,6 +561,7 @@ Saya perlu menjadi admin dengan beberapa izin:
 <b>🏷 Nama:</b> [{title[:25]}]({link})
 <b>⏱️ Durasi:</b> {duration}
 <b>🎧 Atas permintaan:</b> {checking}
+<b>💕 Lepin with love</b> {BOT_NAME}
 """,
         )
         return await mystic.delete()
@@ -740,6 +741,7 @@ async def startyuplay(_, CallbackQuery):
 <b>⏱️ Durasi:</b> {duration}
 <b>💡</b> [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
 <b>🎧 Atas permintaan:</b> {checking}
+<b>💕 Lepin with love</b> {BOT_USERNAME}
 """,
         )
         os.remove(thumb)
